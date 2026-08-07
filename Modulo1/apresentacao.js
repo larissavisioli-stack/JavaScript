@@ -1,0 +1,10 @@
+console.log("Nome: Larissa");
+console.log("Idade: 16 anos");
+console.log("Cidade: Santa Rita do Passa Quatro");
+console.log("Turma: 2EmB");
+console.log("Filme preferido: As Branquelas");
+console.log("Time: Palmeiras");
+console.log("Comida favorita: Pizza");
+console.log("Hobby: Ler");
+console.log("Música favorita: Ilha");
+console.log("Animal de estimação: Gatos");
