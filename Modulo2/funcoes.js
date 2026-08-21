@@ -92,4 +92,19 @@ else{
 }
  parcelamento();
 
-    
+    //funcao tradicional
+
+function somarTrad(numero1, numero2){
+    return numero1 +  numero2;
+}
+
+//arrow function
+const somar = (numero1, numero2) => {
+    return numero1 + numero2;
+}
+
+somarTrad(8, 3);
+console.log("tradicional", somarTrad)
+somar(8, 3);
+console.log(somar);
+
