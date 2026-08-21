@@ -44,6 +44,8 @@ return é como entregar o resultado para outra parte do programa utilizar
 */
 
 
+
+
 function calcularDesconto(valor, desconto){
     return valor - desconto;
 }
@@ -88,6 +90,6 @@ else{
 }
 
 }
- parcelamento(469);
+ parcelamento();
 
     
