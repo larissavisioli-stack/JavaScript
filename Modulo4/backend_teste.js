@@ -1,38 +1,42 @@
 const esperar = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-async function buscarUsuario() {
+async function buscarUsuario(id) {
     await esperar(2000);
-    return {
-        id: id, //o id que a gnt manda executar
-        nome: "Robbyn Rhianna",
-        email: "riri@gmail.com"
+    return { 
+        id: id, //o id que a gnt quiser
+        nome: "Robyn Rihanna", 
+        email: "riri@email.com" 
     };
 }
 
-async function BuscarPedidos() {
-    await esperar(2000);
-    return [
-        {id: 1, produto: "X-tudo"},
-        {id: 2, produto: "Coca-Cola"},
-        {id: 3, produto: "X-Catupiry"}
-    ];
+async function buscarPedidos(usuarioId) {
+    await esperar(3000);
+    const todospedidos = [ 
+        {id: 1, produto: "X-Tudo"}, 
+        {id: 2, produto: "Coca-Cola"}, 
+        {id: 3, produto: "X-Catupiry"} 
+    ]; 
+
+    return todospedidos.filter(pedido => pedido.id === usuarioId);
+
 }
 
-async function executar() { 
+async function executar() {
     try {
-        console.log("Iniciando execução...");
-        console.log("Buscando Usuário...");
-        const usuario = await buscarUsuario(1); 
+        console.log("Iniciando simulação...");
+        
+        console.log("Buscando usuário...");
+        const usuario = await buscarUsuario(1);
         console.log("Usuário encontrado:", usuario);
+    
+        //buscando pedidos
 
-        //Bucar pedidos
-        console.log("Buscando Pedidos...");
-        const pedidos = await BuscarPedidos();
-        console.log("Pedido encontrado...", pedidos);
-
-    }
-    catch(erro) {
-        console.log("Deu errado"); 
+        console.log("Buscando pedidos pelo id...", usuario.id);
+        const pedidos = await buscarPedidos(usuario.id);
+        console.log("Os pedidos encontrados foram:", pedidos);
+    
+    } catch(erro) {
+        console.error("Deu errado:", erro);
     }
 }
 
