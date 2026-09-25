@@ -1,0 +1,22 @@
+{
+  "estabelecimento": "Clínica Veterinária",
+  "cliente": {
+    "id": 3,
+    "nome": "Nina"
+  },
+  "itens": [
+    {
+      "item": "Banho e tosa",
+      "quantidade": 1,
+      "preco": 150,
+      "subtotal": 150
+    },
+    {
+      "item": "Vacinação",
+      "quantidade": 1,
+      "preco": 100,
+      "subtotal": 100
+    }
+  ],
+  "totalPagar": 250
+}
