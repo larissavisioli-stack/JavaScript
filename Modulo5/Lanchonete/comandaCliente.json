@@ -1,0 +1,22 @@
+{
+  "estabelecimento": "Cabana",
+  "cliente": {
+    "id": 1,
+    "nome": "Larissa"
+  },
+  "itens": [
+    {
+      "item": "Batata Frita",
+      "quantidade": 2,
+      "precoUnitario": 12,
+      "subtotal": 24
+    },
+    {
+      "item": "Refrigerante",
+      "quantidade": 1,
+      "precoUnitario": 22,
+      "subtotal": 22
+    }
+  ],
+  "totalPagar": 46
+}
